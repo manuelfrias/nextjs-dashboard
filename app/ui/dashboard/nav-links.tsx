@@ -39,6 +39,7 @@ export default function NavLinks() {
           // </a>
           // Using Link for not rerender all the page in every link
           <Link
+            prefetch={false}
             key={link.name}
             href={link.href}
             className={clsx(

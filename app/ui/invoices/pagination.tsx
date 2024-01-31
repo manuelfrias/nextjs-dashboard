@@ -88,7 +88,7 @@ function PaginationNumber({
   return isActive || position === 'middle' ? (
     <div className={className}>{page}</div>
   ) : (
-    <Link href={href} className={className}>
+    <Link href={href} className={className} prefetch={false}>
       {page}
     </Link>
   );
@@ -123,7 +123,7 @@ function PaginationArrow({
   return isDisabled ? (
     <div className={className}>{icon}</div>
   ) : (
-    <Link className={className} href={href}>
+    <Link className={className} href={href} prefetch={false}>
       {icon}
     </Link>
   );
